@@ -79,7 +79,7 @@ maxTotalAccounts: 3
 
 #The message to show when a cracked person with a premium name tries to login for the second time
 #Leave empty if you dont want this feature to be enabled
-secondAttempt: '&cPlease change your username to something uncommon, &ethis username is already taken by a premium player!'
+secondAttempt: '&4&lERROR! &cThis username is already taken by a premium player. Change your username to something uncommon.'
 
 #Whether to disconnect the player if he enters the wrong password
 disconnectOnWrongPass: true
@@ -88,24 +88,29 @@ disconnectOnWrongPass: true
 authTime: 120
 
 messages:
-  registerMessage: '&bWelcome!, Please register to play, /register <password>'
-  loginMessage: '&bWelcome!, Please login to play, /login <password>'
-  registerTitle: '&2/register'
-  loginTitle: '&2/login'
-  registerError: '&cInvalid Format!, Please use /register <password>'
-  alreadyRegistered: '&cYou have already registered, please use /changepass <oldpassword> <newpassword> if you want to change your pass'
-  loginAndRegisterSuccess: '&bWelcome to adiauth Have fun!'
-  loginAndRegisterSuccessTitle: '&2&bWelcome!'
-  alreadyLoggedIn: '&eYou are already logged in!, You dont need to use this :)'
-  loginError: '&cInvalid Format!, Please use /login <password>'
-  loginNotRegistered: '&cPlease register first!'
-  loginWrongPass: '&eYou have used an incorrect password!'
-  noServersAvailable: '&cNo servers are currently available to connect you to, please come back later'
-  logoutMessage: '&2Successfully logged out!'
-  changePassError: '&cInvalid Format!, &ePlease use /changepass <oldpass> <newpass>'
-  successfulChangePass: '&2&lPassword changed successfully!'
-  genericPremiumError: '&2You dont need to use this command :)'
-  tooManyAccounts: '&cThere are too many accounts from this ip'
-  #TIMELEFT will be replaced by number of seconds left
-  loginRegisterBossBar: '&e You have TIMELEFT seconds.'
-  authTimeExceeded: '&cYou werent able to login within the given time!'
+  registerMessage: '&e&lWelcome! &ePlease use /register <password> to play.'
+  loginMessage: '&e&lWelcome! &ePlease use /login <password> to play.'
+  registerTitle: '&e/register <password>'
+  loginTitle: '&e/login <password>'
+  registerError: '&4&lInvalid format! &cUse /register <password>.'
+  alreadyRegistered: '&8&lYou have already registered. &7Please use /changepass <old password> <new password> if you want to change your password.'
+  # loginAndRegisterSuccess: '&r &9⁂&b⁂ &e&lWelcome to YourServer Have fun! &9⁂&b⁂' - This also works.
+  loginAndRegisterSuccess: |-
+    &r   &9⁂&b⁂ &6&lWelcome to YourServer and have fun! &9⁂&b⁂
+    &r                    &eThanks for using AdiAuth!
+    &r       &eLeave a review at Spigot to further support us.
+    &r   &ehttps://www.spigotmc.org/resources/adiauth.95828/
+  loginAndRegisterSuccessTitle: '&a&l✓'
+  alreadyLoggedIn: '&8&lYou are already logged in!&7 You dont need to use this command.'
+  loginError: '&4&lInvalid format! &cUse /login <password>.'
+  loginNotRegistered: '&cYou need to register first to do this!'
+  loginWrongPass: '&4&lERROR! &cYou have used an incorrect password!'
+  noServersAvailable: '&4&lERROR! &cNo servers are currently available to connect you to, please come back later.'
+  logoutMessage: '&a&l Successfully logged out!'
+  changePassError: '&4&lInvalid format!&c Please use /changepass <old password> <new password>.'
+  successfulChangePass: '&aPassword changed successfully!'
+  genericPremiumError: '&e You dont need to use this command. Premium accounts are secured even without registering in our server.'
+  tooManyAccounts: '&4&lERROR! &cThere are too many accounts from this IP.'
+  # TIMELEFT will be replaced by number of seconds left.
+  loginRegisterBossBar: '&c✘ &eYou have TIMELEFT seconds. &c✘'
+  authTimeExceeded: '&4&lERROR! &cYou were not able to login within the given time!'
